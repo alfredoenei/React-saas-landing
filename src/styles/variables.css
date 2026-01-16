@@ -1,0 +1,23 @@
+:root {
+  /* Paleta Base: Dark Slate */
+  --bg-dark: #0f172a;       /* Slate 900 */
+  --bg-card: #1e293b;       /* Slate 800 */
+  --bg-surface: #334155;    /* Slate 700 */
+  
+  --text-primary: #f8fafc;  /* Slate 50 */
+  --text-secondary: #94a3b8;/* Slate 400 */
+  
+  /* Accent Colors: Indigo/Violet */
+  --primary: #6366f1;       /* Indigo 500 */
+  --primary-hover: #4f46e5; /* Indigo 600 */
+  --primary-glow: rgba(99, 102, 241, 0.5);
+
+  /* Functional */
+  --border-color: #334155;  /* Slate 700 */
+  --radius-sm: 0.375rem;    /* 6px */
+  --radius-md: 0.75rem;     /* 12px */
+  --radius-lg: 1rem;        /* 16px */
+  
+  /* Font Family */
+  --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}

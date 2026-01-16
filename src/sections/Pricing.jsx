@@ -1,75 +1,80 @@
 const PLANS = [
   {
-    name: "Starter",
-    price: "€9",
-    period: "/mo",
-    desc: "For personal projects and learning.",
-    features: ["1 project", "Basic analytics", "Email support"],
-    cta: "Start Starter",
+    name: "Desarrollo MVP",
+    price: "MVP",
+    period: "/sprint",
+    desc: "Para startups que necesitan lanzar rápido y validar.",
+    features: ["Prototipado rápido en React", "Arquitectura escalable desde el día 1", "Entrega continua (CI/CD)"],
+    cta: "Discutir MVP",
     highlighted: false,
   },
   {
-    name: "Pro",
-    price: "€19",
-    period: "/mo",
-    desc: "Best for freelancers and portfolios.",
-    features: ["Unlimited projects", "Advanced analytics", "Priority support"],
-    cta: "Go Pro",
+    name: "Full Stack Partner",
+    price: "Senior",
+    period: "/dev",
+    desc: "Colaboración a largo plazo para productos maduros.",
+    features: ["Desarrollo de features complejas", "Refactorización y Deuda Técnica", "Optimización de rendimiento", "Integración de APIs y Backend"],
+    cta: "Ver disponibilidad",
     highlighted: true,
   },
   {
-    name: "Team",
-    price: "€39",
-    period: "/mo",
-    desc: "For small teams shipping together.",
-    features: ["Team workspace", "Roles & permissions", "Slack integration"],
-    cta: "Start Team",
+    name: "Consultoría",
+    price: "Audit",
+    period: "/hora",
+    desc: "Asesoría técnica para equipos y empresas.",
+    features: ["Revisión de arquitectura", "Mejores prácticas de React", "Mentoria de equipo", "Estrategia de adopción tecnológica"],
+    cta: "Agendar sesión",
     highlighted: false,
   },
 ];
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-5">
+    <section id="pricing" className="py-5 bg-darker">
       <div className="container py-5">
         <div className="text-center mb-5">
-          <h2 className="fw-bold">Simple pricing</h2>
-          <p className="text-secondary mb-0">
-            Choose a plan that fits your needs. Upgrade anytime.
+          <h2 className="fw-bold display-6">¿Cómo podemos colaborar?</h2>
+          <p className="text-secondary lead">
+            Adaptabilidad total a las necesidades de tu proyecto o equipo.
           </p>
         </div>
 
-        <div className="row g-3 align-items-stretch">
+        <div className="row g-4 align-items-center justify-content-center">
           {PLANS.map((p) => (
-            <div key={p.name} className="col-12 col-md-6 col-lg-4">
+            <div key={p.name} className={`col-12 col-md-6 col-lg-4 ${p.highlighted ? 'scale-105' : ''}`}>
               <div
                 className={[
-                  "h-100 rounded-4 p-4 border",
-                  p.highlighted ? "border-primary" : "border-secondary",
-                  "bg-dark",
+                  "h-100 rounded-4 p-4 border position-relative transition-all",
+                  p.highlighted
+                    ? "border-primary bg-dark shadow-lg shadow-primary-subtle"
+                    : "border-secondary bg-dark bg-opacity-25",
                 ].join(" ")}
+                style={p.highlighted ? { zIndex: 10 } : {}}
               >
-                <div className="d-flex justify-content-between align-items-start">
-                  <div>
-                    <h3 className="h5 mb-1">{p.name}</h3>
-                    <p className="text-secondary mb-0">{p.desc}</p>
+                {p.highlighted && (
+                  <div className="position-absolute top-0 start-50 translate-middle">
+                    <span className="badge bg-primary rounded-pill px-3 py-2 shadow-sm uppercase tracking-wider small">Más Solicitado</span>
                   </div>
+                )}
 
-                  {p.highlighted && (
-                    <span className="badge text-bg-primary">Most popular</span>
-                  )}
+                <div className="text-center mb-4">
+                  <h3 className="h5 fw-bold text-secondary text-uppercase tracking-wider small mb-2">{p.name}</h3>
+                  <div className="d-flex justify-content-center align-items-baseline">
+                    <span className="display-6 fw-bold">{p.price}</span>
+                    <span className="text-secondary ms-1 small">{p.period}</span>
+                  </div>
+                  <p className="text-secondary mt-2 small text-balance">{p.desc}</p>
                 </div>
 
-                <div className="my-4">
-                  <span className="display-6 fw-bold">{p.price}</span>
-                  <span className="text-secondary ms-1">{p.period}</span>
-                </div>
+                <hr className="border-secondary opacity-25 my-4" />
 
-                <ul className="list-unstyled text-secondary mb-4">
+                <ul className="list-unstyled text-secondary mb-4 vstack gap-2">
                   {p.features.map((f) => (
-                    <li key={f} className="d-flex gap-2 mb-2">
-                      <span aria-hidden="true">✓</span>
-                      <span>{f}</span>
+                    <li key={f} className="d-flex gap-3 align-items-center">
+                      <div className="rounded-circle bg-primary bg-opacity-10 p-1 d-flex justify-content-center align-items-center flex-shrink-0" style={{ width: 20, height: 20 }}>
+                        <i className="bi bi-check2 text-primary small"></i>
+                      </div>
+                      <span className={`small ${p.highlighted ? 'text-primary-light' : ''}`}>{f}</span>
                     </li>
                   ))}
                 </ul>
@@ -77,8 +82,8 @@ export default function Pricing() {
                 <a
                   href="#contact"
                   className={[
-                    "btn w-100",
-                    p.highlighted ? "btn-primary" : "btn-outline-light",
+                    "btn w-100 py-2",
+                    p.highlighted ? "btn-primary hover-glow" : "btn-outline-light",
                   ].join(" ")}
                 >
                   {p.cta}
@@ -88,8 +93,8 @@ export default function Pricing() {
           ))}
         </div>
 
-        <p className="text-center text-secondary mt-4 mb-0">
-          No credit card required. Cancel anytime.
+        <p className="text-center text-secondary mt-5 mb-0 small opacity-75">
+          * Disponible para contratos remotos internacionales.
         </p>
       </div>
     </section>

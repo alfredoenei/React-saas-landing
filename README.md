@@ -1,16 +1,46 @@
-# React + Vite
+# Portafolio Profesional - Alfredo Enei 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+¡Hola! Bienvenido al repositorio de mi portafolio personal.
 
-Currently, two official plugins are available:
+El objetivo de este proyecto va más allá de presentar una landing page estética; busca demostrar una **arquitectura sólida en React**, escalable y diseñada con estándares profesionales de la industria.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Arquitectura y Tecnologías 🛠️
 
-## React Compiler
+Este proyecto ha sido construido evitando la complejidad innecesaria, priorizando el rendimiento y la mantenibilidad:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*   **React 19**: Utilizando las últimas características estables para una gestión de estado eficiente.
+*   **Vite**: Configuración optimizada para un entorno de desarrollo rápido y builds ligeros.
+*   **Bootstrap 5 + Custom CSS**: Una implementación híbrida que aprovecha la grilla y utilidad de Bootstrap, pero con una capa de **Diseño Personalizado** (variables CSS, Glassmorphism, Dark Mode) para evitar el aspecto genérico.
+*   **Clean Code**: Estructura modular, nombres semánticos y componentes reutilizables.
 
-## Expanding the ESLint configuration
+## Puntos Clave para Reclutadores �
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Si estás evaluando mi perfil técnico, te invito a revisar estos puntos específicos en el código:
+
+1.  **Lógica y Estado (**`src/sections/Hero.jsx`**)**: Implementación de un componente interactivo que gestiona el estado de una lista de tareas, demostrando manejo de inmutabilidad y eventos en React.
+2.  **Validación de Formularios (**`src/sections/Contact.jsx`**)**: Desarrollo de un sistema de validación manual ("vanilla") eficiente, controlando inputs controlados, estados de error y simulación de asincronía (API calls), sin depender de librerías externas pesadas.
+3.  **Componentización**: Observa cómo secciones como `Features` o `Pricing` reutilizan estructuras de datos para renderizar UI de forma dinámica y limpia.
+
+## Ejecución Local 💻
+
+Para correr este proyecto en tu entorno local, solo necesitas Node.js instalado:
+
+1.  Clona el repositorio:
+    ```bash
+    git clone https://github.com/tu-usuario/react-saas-landing.git
+    ```
+2.  Instala las dependencias:
+    ```bash
+    npm install
+    ```
+3.  Inicia el servidor de desarrollo:
+    ```bash
+    npm run dev
+    ```
+
+El sitio estará disponible inmediatamente en tu navegador.
+
+---
+
+Desarrollado por **Alfredo Enei**.
+Estoy abierto a nuevas oportunidades y colaboraciones. ¡No dudes en contactarme!
