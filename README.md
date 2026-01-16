@@ -13,7 +13,7 @@ Este proyecto ha sido construido evitando la complejidad innecesaria, priorizand
 *   **Bootstrap 5 + Custom CSS**: Una implementación híbrida que aprovecha la grilla y utilidad de Bootstrap, pero con una capa de **Diseño Personalizado** (variables CSS, Glassmorphism, Dark Mode) para evitar el aspecto genérico.
 *   **Clean Code**: Estructura modular, nombres semánticos y componentes reutilizables.
 
-## Puntos Clave para Reclutadores �
+
 
 Si estás evaluando mi perfil técnico, te invito a revisar estos puntos específicos en el código:
 
